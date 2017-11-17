@@ -7,11 +7,12 @@ var express = require('express'),
   User = require('./api/models/userModel'),
   bodyParser = require('body-parser'),
   jsonwebtoken = require("jsonwebtoken");
-
+  const cors = require('cors')
+  
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://admin:admin@ds249025.mlab.com:49025/es');
 
-
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
