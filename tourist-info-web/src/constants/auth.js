@@ -1,0 +1,6 @@
+export const LOGIN = 'AUTH:LOGIN';
+export const LOGOUT = 'AUTH:LOGOUT';
+export const FORGOT_PASSWORD = 'AUTH:FORGOT_PASSWORD';
+export const RESET_PASSWORD = 'AUTH:RESET_PASSWORD';
+export const ACCEPT_INVITE = 'AUTH:ACCEPT_INVITE';
+export const REGISTER = 'AUTH:REGISTER';
