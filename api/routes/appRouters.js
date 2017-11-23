@@ -3,6 +3,7 @@
 module.exports = function(app) {
 	var userHandlers = require('../controllers/userController.js');
 	var weather = require('../controllers/weatherController');
+	var tour = require('../controllers/tourController');
 
 	app.route('/auth/register')
 		.post(userHandlers.register);
@@ -13,4 +14,6 @@ module.exports = function(app) {
         .post(weather.getLocation);
     app.route('/weather/get_weather')
         .post(weather.getWeather);
+    app.route('/tour/get_list')
+        .post(tour.getTourListByCategory);
 };
