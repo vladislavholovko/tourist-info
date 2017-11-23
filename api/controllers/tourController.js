@@ -1,12 +1,12 @@
 var request = require('request');
+require('dotenv').config()
 
-const SYGIC_API_KEY = "MNsb98pTSk9PSt4xkTGic4yYWZxb7qKO5sO1thFb";
 
 exports.getTourListByCategory = function(req, res) {
     var category = req.body.category;
     var limit = req.body.limit;
   var headers = {
-    'x-api-key': SYGIC_API_KEY
+    'x-api-key': process.env.SYGIC_API_KEY
   };
 
   var options = {

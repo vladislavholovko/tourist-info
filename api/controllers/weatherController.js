@@ -2,8 +2,8 @@
 const DarkSky = require('dark-sky')
 var geocoder = require('geocoder');
 
-const GOOGLE_API_KEY = {key: "AIzaSyB5p3kiamiJiAToX_i_9QSP7zIyzxlUDKE"};
-const darksky = new DarkSky("ed1c4ebb396abf6782b0866d9423e08e")
+const GOOGLE_API_KEY = {key: process.env.GOOGLE_KEY};
+const darksky = new DarkSky(process.env.DARK_SKY)
 
 exports.getLocation = function(req, res) {
     var address = req.body.address;
