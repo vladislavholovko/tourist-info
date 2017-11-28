@@ -1,0 +1,163 @@
+.list-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-container {
+  flex: 1 1 auto;
+}
+
+.infinite-table {
+  display: table;
+}
+
+
+.text-muted {
+  padding-right: 5px;
+}
+
+.react-tagsinput{
+  border-radius: 4px;
+  /*height: 34px;*/
+  /*padding-top: 1px;*/
+}
+
+.react-tagsinput-tag{
+  background-color: #f5f5f5;
+  color: #000000;
+  border: 1px solid #ddd;
+}
+
+.react-tagsinput--focused{
+  border: 1px solid #ddd;
+}
+
+.addMarket{
+  float: right;
+  margin-bottom: 20px;
+}
+
+.markets-list>.market{
+  margin-bottom: 1px;
+  margin-top: 1px!important;
+}
+
+.market span:hover{
+  cursor: pointer;
+}
+
+.form-horizontal .control-label{
+  text-align: left;
+  padding-right: 0;
+}
+
+@media (min-width: 768px) {
+  .add-modal .modal-dialog {
+    width: 700px;
+  }
+}
+
+.markets-list>.market {
+  border-radius: 0;
+}
+
+.button-group{
+  float: right;
+}
+
+.deleteButton{
+  margin-left: 15px;
+}
+
+.saveButton{
+  width: 69px;
+}
+
+.searchBoundingBoxDistance{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.invite-admin{
+  margin-bottom: 5px;
+  float: right;
+}
+
+.invite-admin-btn{
+  float: right;
+  margin-top: 15px;
+}
+
+.indent-venue{
+  padding-left: 5px;
+}
+
+.managerField{
+  padding-right: 0;
+  padding-left: 0;
+}
+.search-button{
+  margin-top: 0;
+}
+.dateRange{
+  padding-left: 0;
+}
+.terms{
+  min-height: 750px;
+  resize: none;
+  overflow:auto;
+  min-width: 400px;
+}
+
+.manuallySelect{
+  float: right;
+}
+
+div.manuallySelectBody.modal-body{
+  padding: 0;
+}
+
+div.manuallySelectBody.modal-body div.prof-list{
+  margin: 0;
+}
+
+div.manuallySelectBody div.panel-body{
+  padding-right: 0;
+}
+
+.acceptRejectBtn{
+  margin: 0;
+  padding: 0;
+}
+
+.prof-list-row :hover{
+  cursor: pointer;
+}
+
+.notification{
+  z-index: 99999;
+}
+
+.dateRange h3.popover-title{
+  height: 44px;
+}
+
+.sign-up-btn{
+  float: right;
+  height: 50px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.sign-in-btn {
+  width: 100%
+}
+
+.weather-search-btn{
+  margin-top: 10px;
+}
+
+.or-divider {
+  text-align: center;
+  margin-top: 10px;
+}
