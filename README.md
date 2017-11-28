@@ -7,11 +7,6 @@
 /weather/get_weather (lat, lng, date)
 /tour/get_list (category, limit)
 ```
-# WEB PART
-To run web application do this steps:
- - change API_URL in /src/constants/app to your api address fro example (API_URL = `http://localhost:3000/`)
- - in terminal run command: npm start
-=======
 **list of available categories**
 * discovering
 * eating
@@ -24,3 +19,9 @@ To run web application do this steps:
 * sleeping
 * doing_sports
 * traveling
+
+# WEB PART
+To run web application do this steps:
+ - change API_URL in /src/constants/app to your api address fro example (API_URL = `http://localhost:3000/`)
+ - in terminal run command: npm start
+=======
