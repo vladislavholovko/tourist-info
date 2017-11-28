@@ -35,7 +35,7 @@ export function getWeather(data) {
               data: response.data.response,
             },
           });
-          return true;
+          return response;
         } else {
           return false;
         }

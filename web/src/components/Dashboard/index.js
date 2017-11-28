@@ -128,6 +128,7 @@ export default class Dashboard extends Component {
                 'lng':resp.data.location.lng
             }).then((response)=>{
                 this.setState({ weather: response})
+                console.log(response)
 
             })
         });

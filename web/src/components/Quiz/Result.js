@@ -20,7 +20,20 @@ function Result(props) {
                 <p>{props.quizResult.data.name}</p>
                 <p>{props.quizResult.data.perex}</p>
                 <p>{props.quizResult.data.rating}</p>
-                {console.log(props.weather)}
+
+                {
+                    props.weather.data ? props.weather.data.list.map((el, i)=>{
+                        return(
+                            <div key={i}>
+                            <p> Date = {el.dt} </p>
+                            <p> humidity = {el.humidity} </p>
+                            <p> weather = {el.weather[0].description} </p>
+                            <p> wind speed = {el.speed} </p>
+                            <p> Temp morn = {el.temp.morn}  day = {el.temp.day}  night = {el.temp.night}</p>
+                            </div>
+                        )
+                    }):'weather loading'
+                }
 
             </div>
         </ReactCSSTransitionGroup>
