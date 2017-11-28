@@ -19,3 +19,4 @@
 * sleeping
 * doing_sports
 * traveling
+test
