@@ -31,6 +31,7 @@ export default class Dashboard extends Component {
             question: '',
             answerOptions: [],
             answer: '',
+            weather:'',
             answersCount: {
                 discovering: 0,
                 relaxing: 0,
@@ -121,9 +122,16 @@ export default class Dashboard extends Component {
 
         }).then((resp)=>{
           console.log(resp)
-            this.setState({ result: resp });
+            this.setState({ result: resp })
+            this.props.dashboardActions.getWeather({
+                'lat':resp.data.location.lat,
+                'lng':resp.data.location.lng
+            }).then((response)=>{
+                this.setState({ weather: response})
 
-        })
+            })
+        });
+
     }
 
 
@@ -155,7 +163,7 @@ export default class Dashboard extends Component {
 
     renderResult() {
         return (
-            <Result quizResult={this.state.result} />
+            <Result quizResult={this.state.result} weather={this.state.weather}/>
         );
     }
   render() {

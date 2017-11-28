@@ -25,6 +25,7 @@
     "express": "^4.14.0",
     "geocoder": "^0.2.3",
     "jsonwebtoken": "^7.3.0",
-    "mongoose": "^4.7.2"
+    "mongoose": "^4.7.2",
+    "openweather-apis": "^3.3.5"
   }
 }

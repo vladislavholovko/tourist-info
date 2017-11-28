@@ -20,7 +20,7 @@ function Result(props) {
                 <p>{props.quizResult.data.name}</p>
                 <p>{props.quizResult.data.perex}</p>
                 <p>{props.quizResult.data.rating}</p>
-
+                {console.log(props.weather)}
 
             </div>
         </ReactCSSTransitionGroup>
@@ -30,6 +30,7 @@ function Result(props) {
 
 Result.propTypes = {
     quizResult: React.PropTypes.any,
+    weather: React.PropTypes.any,
 };
 
 export default Result;

@@ -1,9 +1,9 @@
 'use strict';
-const DarkSky = require('dark-sky')
+var weather = require('openweather-apis');
+
 var geocoder = require('geocoder');
 
 const GOOGLE_API_KEY = {key: process.env.GOOGLE_KEY};
-const darksky = new DarkSky(process.env.DARK_SKY)
 
 exports.getLocation = function(req, res) {
     var address = req.body.address;
@@ -17,20 +17,14 @@ exports.getLocation = function(req, res) {
 exports.getWeather = function(req, res) {
     var lat = req.body.lat;
     var lng = req.body.lng;
-    var date = req.body.date;
+    weather.setAPPID('2a1ad423e9fad1a3ceda81fda56b1366');
 
-    darksky
-        .latitude(lat)            // required: latitude, string || float.
-        .longitude(lng)            // required: longitude, string || float.
-        .time(date)             // optional: date, string 'YYYY-MM-DD'.
-        .units('ca')                    // optional: units, string, refer to API documentation.
-        .language('en')                 // optional: language, string, refer to API documentation.
-        .exclude('minutely,daily')      // optional: exclude, string || array, refer to API documentation.
-        .extendHourly(false)             // optional: extend, boolean, refer to API documentation.
-        .get()                          // execute your get request.
-        .then((response)=>{
-        return res.json({response})
-    })
-        .catch(console.log)
+    weather.setLang('en');
+    weather.setCoordinate(lat,lng)
+    weather.setUnits('metric');
+    weather.getWeatherForecastForDays(3, function(err, obj){
+        return res.json(obj)
+    });
+
 
 };
