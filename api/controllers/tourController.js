@@ -18,8 +18,14 @@ exports.getTourListByCategory = function(req, res) {
 
   request(options, function (error, response, body) {
     if (!error && response.statusCode == 200) {
-      // Print out the response body
-      return res.send(response.body);
+      if(req.body.ran === 'true'){
+        console.log(body.status_code)
+          return res.send(JSON.parse(body).data.places[Math.floor(Math.random()*JSON.parse(body).data.places.length)]);
+
+      }else {
+          return res.send(body);
+      }
+
     }
   })
 };

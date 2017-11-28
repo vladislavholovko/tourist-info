@@ -19,7 +19,11 @@ export default function dashboardReducer(state = initialState, action) {
         ...state,
         weather: action.payload.data
       };
-
+      case CONSTANT.GET_TOUR:
+          return {
+              ...state,
+              tour: action.payload.data
+          };
     default:
       return state;
   }

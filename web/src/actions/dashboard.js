@@ -42,3 +42,24 @@ export function getWeather(data) {
       });
   }
 }
+
+export function getTourList(data) {
+    return (dispatch) => {
+        const requestBody = data;
+
+        return sendRequest(`tour/get_list`, 'POST', requestBody)
+            .then(response => {
+                if (response.status === 200) {
+                    dispatch({
+                        type: CONSTANT.GET_WEATHER,
+                        payload: {
+                            data: response.data.response,
+                        },
+                    });
+                    return response;
+                } else {
+                    return false;
+                }
+            });
+    }
+}
