@@ -18,18 +18,7 @@ function Result(props) {
             transitionAppearTimeout={500}
         >
             <div>
-                You prefer <p>{props.quizResult.data.categories[0]}</p>
-                <img src={props.quizResult.data.thumbnail_url} />
-                <p>{props.quizResult.data.name_suffix}</p>
-                <p>{props.quizResult.data.name}</p>
-                <p>{props.quizResult.data.perex}</p>
-                <p>{props.quizResult.data.rating}</p>
-                <ReactWeather
-                    forecast="5days"
-                    apikey="96955de8eeb343cdb78190903172911"
-                    type="geo"
-                    lat={props.quizResult.data.location.lat}
-                    lon={props.quizResult.data.location.lng}/>
+
             <div><h3>Your category of turism: {props.quizResult.data.categories[0]} </h3></div>
             <Jumbotron>
                 <Row>
@@ -45,9 +34,15 @@ function Result(props) {
                     </Col>
                 </Row>
                 <h4>Rating: {props.quizResult.data.rating}</h4>
+                <ReactWeather
+                    forecast="5days"
+                    apikey="96955de8eeb343cdb78190903172911"
+                    type="geo"
+                    lat={props.quizResult.data.location.lat}
+                    lon={props.quizResult.data.location.lng}/>
                 <p><Button bsStyle="primary">See more tours in this category...</Button></p>
-            </Jumbotron>
 
+            </Jumbotron>
 
             </div>
         </ReactCSSTransitionGroup>
