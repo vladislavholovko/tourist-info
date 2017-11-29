@@ -43,7 +43,6 @@ function Result(props) {
                 <p><Button bsStyle="primary">See more tours in this category...</Button></p>
 
             </Jumbotron>
-
             </div>
         </ReactCSSTransitionGroup>
     );
