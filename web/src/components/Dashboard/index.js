@@ -16,6 +16,7 @@ import Quiz from '../Quiz/Quiz';
 import Result from '../Quiz/Result';
 import '../Quiz/quiz.css';
 
+
 import './Dashboard.css'
 
 const appUser = JSON.parse(localStorage.getItem('app_user'));

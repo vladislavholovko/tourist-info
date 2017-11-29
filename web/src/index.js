@@ -19,6 +19,9 @@ import NotFoundLayout from './containers/NotFound'
 import DashboardContainer from './containers/Dashboard'
 import Dashboard from './components/Dashboard'
 
+import ToursContainer from './containers/Tours'
+import Tours from './components/Tours'
+
 import * as appActions from './actions/app'
 
 import './styles/font-awesome.min.css'
@@ -69,6 +72,10 @@ window.onload = function() {
 
           <Route name='DashboardContainer' component={DashboardContainer}>
             <Route path="/" name="Dashboard" component={Dashboard} />
+          </Route>
+
+            <Route name='ToursContainer' component={ToursContainer}>
+            <Route path="/tours" name="Tours" component={Tours} />
           </Route>
 
         </Route>
