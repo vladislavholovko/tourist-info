@@ -1,0 +1,12 @@
+.photo{
+    margin: -5px 10px 10px 10px;
+    width: 150px;
+}
+
+.photo img {
+    border-radius: 5px;
+}
+
+.photo-column {
+    text-align: center;
+}

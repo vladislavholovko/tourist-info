@@ -161,3 +161,7 @@ div.manuallySelectBody div.panel-body{
   text-align: center;
   margin-top: 10px;
 }
+
+#page-wrapper {
+  margin: 0;
+}

@@ -173,41 +173,9 @@ export default class Dashboard extends Component {
       <div>
         <Row className="row">
           <Col lg={12}>
-            <PageHeader>Weather</PageHeader>
+            <PageHeader>{this.state.result ? 'Recomendation' : 'Tour selection test '}</PageHeader>
           </Col>
         </Row>
-        {/*<Row className="row">*/}
-          {/*<Col lg={12}>*/}
-            {/*<Panel collapsible defaultExpanded header={<span>Weather forecast</span>} className="admin-info">*/}
-              {/*<form role="form" onSubmit={this.handleSubmit.bind(this)}>*/}
-                {/*<Row>*/}
-                  {/*<Col lg={11}>*/}
-                  {/*<FormGroup controlId="location">*/}
-                    {/*<FormControl*/}
-                      {/*name="location"*/}
-                      {/*type="text"*/}
-                      {/*placeholder="Enter location"*/}
-                    {/*/>*/}
-                  {/*</FormGroup>*/}
-                  {/*</Col>*/}
-                  {/*<Col lg={1}>*/}
-                  {/*<FormGroup controlId="weather-search-btn">*/}
-                    {/*<Button type="submit">Search</Button>*/}
-                  {/*</FormGroup>*/}
-                  {/*</Col>*/}
-                {/*</Row>*/}
-                {/*<Row>*/}
-                {/*<Col lg={12}>*/}
-                  {/*<p>{`Summary: ${data.currently ? data.currently.summary : 'N/A'}`}</p>*/}
-                {/*</Col>*/}
-                {/*<Col lg={12}>*/}
-                  {/*<p>{`Temperature: ${data.currently ? data.currently.temperature : 'N/A'}`}</p>*/}
-                {/*</Col>*/}
-                {/*</Row>*/}
-              {/*</form>*/}
-            {/*</Panel>*/}
-          {/*</Col>*/}
-        {/*</Row>*/}
               {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>
     );

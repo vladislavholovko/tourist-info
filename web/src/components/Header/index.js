@@ -73,7 +73,7 @@ export default class Header extends React.Component {
 
 
           
-          <Sidebar menuItems={this.props.menuItems} />
+          {/*<Sidebar menuItems={this.props.menuItems} />*/}
         </Navbar>
       </div>
     );
