@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactWeather from 'react-open-weather';
 
+import 'react-open-weather/lib/css/ReactWeather.css';
 function Result(props) {
 
     return (
@@ -20,20 +22,13 @@ function Result(props) {
                 <p>{props.quizResult.data.name}</p>
                 <p>{props.quizResult.data.perex}</p>
                 <p>{props.quizResult.data.rating}</p>
+                <ReactWeather
+                    forecast="5days"
+                    apikey="96955de8eeb343cdb78190903172911"
+                    type="geo"
+                    lat={props.quizResult.data.location.lat}
+                    lon={props.quizResult.data.location.lng}/>
 
-                {
-                    props.weather.data ? props.weather.data.list.map((el, i)=>{
-                        return(
-                            <div key={i}>
-                            <p> Date = {el.dt} </p>
-                            <p> humidity = {el.humidity} </p>
-                            <p> weather = {el.weather[0].description} </p>
-                            <p> wind speed = {el.speed} </p>
-                            <p> Temp morn = {el.temp.morn}  day = {el.temp.day}  night = {el.temp.night}</p>
-                            </div>
-                        )
-                    }):'weather loading'
-                }
 
             </div>
         </ReactCSSTransitionGroup>
