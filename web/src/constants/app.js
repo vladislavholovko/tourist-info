@@ -1,7 +1,7 @@
 // export const API_URL = 'http://localhost:3017/';
 export const ENVIRONMENT = 'dev';
-export const VERSION = '0.0.1';
-export const API_URL = `http://localhost:3000/`;
+export const VERSION = '1.0.0';
+export const API_URL = `https://expert-sys.herokuapp.com/`;
 
 export const SET_ERROR = 'SET_ERROR';
 export const ADD_DATA = 'ADD_DATA';
