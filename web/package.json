@@ -37,7 +37,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "maczip": "cd ./build && zip ../snapshyft-admin-portal.zip -r * .[^.]*"
+    "test": "react-scripts test --env=jsdom"
   }
 }
