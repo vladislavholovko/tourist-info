@@ -5,6 +5,9 @@
   "devDependencies": {
     "react-scripts": "0.7.0"
   },
+  
+  "homepage":"https://vadim-ck.github.io/tourist-info/",
+  
   "dependencies": {
     "classnames": "^2.2.4",
     "history": "^2.1.1",
